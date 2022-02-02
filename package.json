@@ -1,0 +1,28 @@
+{
+  "name": "novlab-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sothis04/NovLab-JS.git"
+  },
+  "author": "Sothis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sothis04/NovLab-JS/issues"
+  },
+  "homepage": "https://github.com/Sothis04/NovLab-JS#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0"
+  }
+}
