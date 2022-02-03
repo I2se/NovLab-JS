@@ -8,7 +8,7 @@ module.exports = {
         if (!command) return;
 
         try {
-            command.execute(interaction);
+            command.execute(interaction, interaction.message, interaction.member, interaction.channel, interaction.client, interaction.guild);
         } catch (error) {
             console.error(error);
             interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
