@@ -16,12 +16,12 @@ module.exports = {
         if (!songIn) return interaction.reply('You need to insert a song !');
 
         client.distube.play(voice_channel, songIn, { text_channel: channel, member: member });
-        const song = client.distube.search(songIn, {
+        const song = await client.distube.search(songIn, {
             limit: 1,
             type: 'video',
         });
 
-        return await interaction.reply(`**${song}** added to the queue !`)
+        return await interaction.reply(`**${song[0].name}** added to the queue !`)
 
     },
 };

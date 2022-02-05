@@ -15,6 +15,8 @@ client.distube = new DisTube(client, {
     emitNewSongOnly: true,
     nsfw: true,
     youtubeDL: false,
+    leaveOnEmpty: false,
+    leaveOnStop: false,
     plugins: [new SpotifyPlugin(), new SoundCloudPlugin()]
 });
 
