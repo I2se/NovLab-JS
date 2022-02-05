@@ -42,7 +42,6 @@
             }
         ],
         "no-floating-decimal": "error",
-        "no-lonely-if": "error",
         "no-multi-spaces": "error",
         "no-shadow": [
             "error",
