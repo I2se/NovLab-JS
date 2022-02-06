@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node .\\index.js",
+    "deploy-commands": "node .\\utils\\deploy-commands.js",
+    "purge": "node .\\utils\\empty-commands.js"
   },
   "repository": {
     "type": "git",
