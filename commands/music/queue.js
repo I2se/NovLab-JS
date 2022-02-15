@@ -20,20 +20,28 @@ module.exports = {
                     .setColor(blue_dark)
                     .setTitle('Current Queue')
 
-                for (let index = 0; index < 20; index++) {
-                    const affIndex = index + 1
-                    const affSong = song[index]
-                    msg = msg + affIndex + '. ' + affSong.name + ' by ' + affSong.uploader.name + ' [' + affSong.formattedDuration + '] \n';
+                if (song.length > 20) {
+                    for (let index = 0; index < 20; index++) {
+                        const affIndex = index + 1
+                        const affSong = song[index]
+                        msg = msg + affIndex + '. ' + affSong.name + ' by ' + affSong.uploader.name + ' [' + affSong.formattedDuration + '] \n';
+                    }
+
+                    if (song.length >= 21) {
+                        const numberMusics = song.length - 20;
+                        msg = msg + 'And `' + numberMusics + '` other musics';
+                    }
+
+                    embed.setDescription(msg);
+
+                    interaction.reply({ embeds: [embed] });
+                } else {
+                    let counter = 0;
+                    song.forEach(element => {
+                        counter = counter + 1;
+                        msg = msg + counter + '. ' + element.name + ' by ' + element.uploader.name + ' [' + element.formattedDuration + '] \n';
+                    });
                 }
-
-                if (song.length >= 21) {
-                    const numberMusics = song.length - 20;
-                    msg = msg + 'And `' + numberMusics + '` other musics';
-                }
-
-                embed.setDescription(msg);
-
-                interaction.reply({ embeds: [embed] });
             }
         }
     }

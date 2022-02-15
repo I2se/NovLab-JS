@@ -9,5 +9,5 @@ module.exports = (client) => {
             console.log('Command ' + pull.data.name + ' loaded');
         }
     }
-    ['music', 'utils'].forEach(x => load(x))
+    ['music', 'utils', 'module'].forEach(x => load(x))
 }
