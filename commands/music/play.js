@@ -54,7 +54,6 @@ module.exports = {
                 } catch (e) {
                     console.log(e.stack ? e.stack : e)
                     interaction.editReply({
-                        content: 'Error: ',
                         embeds: [
                             new MessageEmbed().setColor(red_dark)
                                 .setDescription(`\`\`\`${e}\`\`\``)

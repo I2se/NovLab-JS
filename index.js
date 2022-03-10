@@ -3,6 +3,7 @@ const { token, clientIdSpotify, clientSecretSpotify, cookie } = require('./utils
 const { DisTube } = require('distube');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
 const { SpotifyPlugin } = require('@distube/spotify');
+const Sequelize = require('sequelize');
 
 const client = new Client({
     intents: [Intents.FLAGS.GUILDS,
