@@ -13,7 +13,7 @@ Reflect.defineProperty(Guilds.prototype, 'getGuild', {
     /* eslint-disable-next-line func-name-matching */
     value: async function getGuild(guild) {
         const guildDb = await Guilds.findOne({
-            where: { guildId: this.guildId }
+            where: { guildId: this.guild.id }
         })
         if (guildDb) {
             guildDb.name = guild.name;
